@@ -35,3 +35,4 @@ void timMSNV(Nodeptr list, char* ma);
 void xuatNV(Nodeptr list);
 void timHoNV(Nodeptr list, char* ho);
 void timTenNV(Nodeptr list, char* ten);
+void sapXepNV(Nodeptr& list, NhanVien& nv);
