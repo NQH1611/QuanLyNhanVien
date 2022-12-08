@@ -184,3 +184,27 @@ void xoa_NVVT(Nodeptr& list, int vt)
 	}
 	xoaNV(list, p->data);
 }
+void xuatNV(Nodeptr list)
+{
+	int w = 10;
+	cout << setw(w) << "MSNV" << setw(w) << "Ho NV" << setw(w) << "Ten NV" << setw(w) << "Luong" << setw(w) << "HeSoLuong" << setw(w) << "ThamNen" << endl;
+	cout << setw(w) << list->data.msnv << setw(w) << list->data.honv << setw(w) << list->data.tennv << setw(w) << list->data.luong << setw(w) << list->data.heSoLuong << setw(w) << list->data.thamnien << endl;
+}
+void timMSNV(Nodeptr list, char* ma)
+{
+	for (Nodeptr p = list; p != NULL; p = p->link)
+		if (strcmp(p->data.msnv, ma) == 0)
+			xuatNV(p);
+}
+void timHoNV(Nodeptr list, char* ho)
+{
+	for (Nodeptr p = list; p != NULL; p = p->link)
+		if (strcmp(p->data.honv, ho) == 0)
+			xuatNV(p);
+}
+void timTenNV(Nodeptr list, char* ten)
+{
+	for (Nodeptr p = list; p != NULL; p = p->link)
+		if (strcmp(p->data.tennv, ten) == 0)
+			xuatNV(p);
+}

@@ -31,3 +31,7 @@ void xuatDSNV(Nodeptr list);
 void Them_NV(Nodeptr list);
 void xoaNV(Nodeptr& list, NhanVien nv);
 void xoa_NVVT(Nodeptr& list, int vt);
+void timMSNV(Nodeptr list, char* ma);
+void xuatNV(Nodeptr list);
+void timHoNV(Nodeptr list, char* ho);
+void timTenNV(Nodeptr list, char* ten);
