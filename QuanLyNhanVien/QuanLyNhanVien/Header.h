@@ -26,4 +26,6 @@ Nodeptr taoNode(NhanVien nv);
 Nodeptr themDau(Nodeptr& list, NhanVien nv);
 Nodeptr themCuoi(Nodeptr& list, NhanVien nv);
 void nhapDSNV(Nodeptr& list);
+Nodeptr NhapNV(Nodeptr& list);
 void xuatDSNV(Nodeptr list);
+void Them_NV(Nodeptr list);

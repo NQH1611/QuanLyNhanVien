@@ -87,3 +87,66 @@ void xuatDSNV(Nodeptr list)
 	}
 }
 
+Nodeptr NhapNV(Nodeptr& list)
+{
+	NhanVien nv;
+	khoiTao(list);
+	cout << "\nNhap ma so nhan vien: ";
+	cin.getline(nv.msnv, 10);
+	cout << "\nNhap ho nhan vien: ";
+	cin.getline(nv.honv, 30);
+	cout << "\nNhap ten nhan vien: ";
+	cin.getline(nv.tennv, 30);
+	cout << "\nnhap luong cua nhan vien: ";
+	cin >> nv.luong;
+	while (nv.luong <= 0)
+	{
+		cout << "\nluong cua nhan vien khong the nho hon hoac bang 0, moi nhap lai!";
+		cin >> nv.luong;
+	}
+	cout << "\nNhap he so luong cua nhan vien: ";
+	cin >> nv.heSoLuong;
+	cout << "\nNhap tham nien cua nhan vien: ";
+	cin >> nv.thamnien;
+	cin.ignore();
+	themCuoi(list, nv);
+	return list;
+}
+
+
+void Them_NV(Nodeptr list)
+{
+	Nodeptr p = list;
+	Nodeptr q = list;
+	Nodeptr beforeq = list;
+	Nodeptr temp;
+
+	NhapNV(temp);
+	int pos;
+	int demds = 0;
+	int dem = 0;
+	while (p != NULL)
+	{
+		demds++;
+		p = p->link;
+	}
+	cout << "Hien tai danh sach co " << demds << " vi tri." << "Chen sau vi tri: ";
+	cin >> pos;
+	while (pos < 0 || pos > demds)
+	{
+		cout << "(" << demds << ") " << "Vi tri nhan vien khong hop le! Vui long nhap lai: ";
+		cin >> pos;
+	}
+	while (q != NULL)
+	{
+		dem++;
+		if (dem == pos)
+		{
+			temp->link = q->link;
+			q->link = temp;
+		}
+		q = q->link;
+	}
+	cout << endl;
+
+}
