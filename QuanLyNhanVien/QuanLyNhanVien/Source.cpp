@@ -74,3 +74,15 @@ void nhapDSNV(Nodeptr& list)
 		themCuoi(list, nv);
 	} while (1);
 }
+void xuatDSNV(Nodeptr list)
+{
+	Nodeptr p = list;
+	int w = 10;
+	cout << "\n\t\tDANH SACH NHAN VIEN" << endl;
+	cout << setw(w) << "MSNV" << setw(w) << "Ho NV" << setw(w) << "Ten NV" << setw(w) << "Luong" << setw(w) << "HeSoLuong" << setw(w) << "ThamNien" << setw(w) << "Thanhtien" << endl;
+	while (p != NULL)
+	{
+		cout << setw(w) << p->data.msnv << setw(w) << p->data.honv << setw(w) << p->data.tennv << setw(w) << p->data.luong << setw(w) << p->data.heSoLuong << setw(w) << p->data.thamnien << setw(w) << p->data.heSoLuong * p->data.luong << endl;
+		p = p->link;
+	}
+}
