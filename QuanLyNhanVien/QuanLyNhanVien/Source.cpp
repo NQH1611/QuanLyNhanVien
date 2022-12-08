@@ -92,3 +92,22 @@ void xoa_NVVT(Nodeptr& list, int vt)
 	}
 
 }
+void Ghi_Thong_Tin_1_NhanVien(ostream& fileout, NhanVien nv)
+{
+	fileout << nv.msnv << ",";
+	fileout << nv.honv << ",";
+	fileout << nv.tennv << ",";
+	fileout << nv.luong << ",";
+	fileout << nv.thamnien;
+}
+void GHIFILE(Nodeptr list)
+{
+	ofstream fileout;
+	fileout.open("DANHSACHNHANVIEN.txt", ios::out);
+	for (Nodeptr p = list; p != NULL; p = p->link)
+	{
+		Ghi_Thong_Tin_1_NhanVien(fileout, p->data);
+		fileout << endl;
+	}
+	fileout.close();
+}
