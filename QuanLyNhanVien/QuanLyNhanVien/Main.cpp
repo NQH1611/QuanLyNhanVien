@@ -2,4 +2,5 @@
 
 void main() {
 	Nodeptr dsnv;
+	Them_NV(dsnv);
 }
