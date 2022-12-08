@@ -184,3 +184,22 @@ void xoa_NVVT(Nodeptr& list, int vt)
 	}
 	xoaNV(list, p->data);
 }
+
+
+void sapXepNV(Nodeptr& list, NhanVien& nv)
+{
+	for (Nodeptr temp = list; temp != NULL; temp = temp->link)
+	{
+		for (Nodeptr temp1 = temp->link; temp1 != NULL; temp1 = temp1->link)
+			if (strcmp(temp1->data.msnv, temp->data.msnv) == -1)
+			{
+				nv = temp->data;
+				temp->data = temp1->data;
+				temp1->data = nv;
+
+			}
+	}
+	cout << "Danh sach sau khi sap xep" << endl;
+	xuatDSNV(list);
+}
+

@@ -31,3 +31,4 @@ void xuatDSNV(Nodeptr list);
 void Them_NV(Nodeptr list);
 void xoaNV(Nodeptr& list, NhanVien nv);
 void xoa_NVVT(Nodeptr& list, int vt);
+void sapXepNV(Nodeptr& list, NhanVien& nv);
