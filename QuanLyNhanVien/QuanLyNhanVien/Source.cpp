@@ -86,3 +86,4 @@ void xuatDSNV(Nodeptr list)
 		p = p->link;
 	}
 }
+
