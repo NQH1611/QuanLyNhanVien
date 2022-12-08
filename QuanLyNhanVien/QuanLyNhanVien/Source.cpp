@@ -5,7 +5,7 @@ using namespace std;
 
 void khoiTao(Nodeptr& list)
 {
-	list = NULL; //khởi tạo một node có giá trị rỗng trong danh sách liên kết 
+	list = NULL; //khởi tạo một node có giá trị rỗng trong danh sách liên kết
 }
 int isEmpty(Nodeptr list)
 {
@@ -26,7 +26,7 @@ Nodeptr taoNode(NhanVien nv)
 	Nodeptr p;
 	p = new Node;
 	p->data = nv; //đưa dữ liệu của biến nhân viên nv vào data của node p
-	p->link = NULL; //khởi tạo 1 node p nhưng chưa trỏ đến node nào hết 
+	p->link = NULL; //khởi tạo 1 node p nhưng chưa trỏ đến node nào hết
 	return p;
 }
 Nodeptr themDau(Nodeptr& list, NhanVien nv)
@@ -78,9 +78,17 @@ void xoaNV(Nodeptr& list,NhanVien nv)
 }
 void xoa_NVVT(Nodeptr& list, int vt)
 {
+	int i;
 	Nodeptr p = list;
 	for (int i = 0; i < vt-1; i++) {
 		p = p->link;
 	}
-	xoaNV(list, p->data);
+	cout << "Ban thuc su muon xoa ? 0: Co | 1: Khong ?";
+	cin >> i;
+	if(i==0){
+		xoaNV(list, p->data);
+	} else{
+		break;
+	}
+
 }
