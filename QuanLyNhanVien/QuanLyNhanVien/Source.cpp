@@ -150,3 +150,37 @@ void Them_NV(Nodeptr list)
 	cout << endl;
 
 }
+void xoaNV(Nodeptr& list,NhanVien nv)
+{
+	if (strcmp(list->data.msnv, nv.msnv) == 0)
+	{
+		Nodeptr p = list;
+		p = p->link;
+		delete p;
+		p = NULL;
+	}
+	else {
+		Nodeptr p, before;
+		p = list;
+		before = list;
+		while (p != NULL && strcmp(p->data.msnv, nv.msnv) != 0)
+		{
+			before = p;
+			p = p->link;
+		}
+		if (p != NULL)
+		{
+			before->link = p->link;
+			delete p;
+			p = NULL;
+		}
+	}
+}
+void xoa_NVVT(Nodeptr& list, int vt)
+{
+	Nodeptr p = list;
+	for (int i = 0; i < vt-1; i++) {
+		p = p->link;
+	}
+	xoaNV(list, p->data);
+}

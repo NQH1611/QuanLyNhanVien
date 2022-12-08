@@ -29,3 +29,5 @@ void nhapDSNV(Nodeptr& list);
 Nodeptr NhapNV(Nodeptr& list);
 void xuatDSNV(Nodeptr list);
 void Them_NV(Nodeptr list);
+void xoaNV(Nodeptr& list, NhanVien nv);
+void xoa_NVVT(Nodeptr& list, int vt);
