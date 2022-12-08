@@ -50,3 +50,27 @@ Nodeptr themCuoi(Nodeptr& list, NhanVien nv)
 	}
 	return p;
 }
+void nhapDSNV(Nodeptr& list)
+{
+	NhanVien nv;
+	khoiTao(list);
+	do
+	{
+		cout << "\nNhap ma so nhan vien (NHAP 0 DE THOAT): ";
+		cin.getline(nv.msnv, 10);
+		cout << "\nMoi ban nhap lai ma so nhan vien: ";
+		cin.getline(nv.msnv, 10);
+		cout << "\nNhap ho cua nhan vien: ";
+		cin.getline(nv.honv, 30);
+		cout << "\nNhap ten cau nhan vien: ";
+		cin.getline(nv.tennv, 30);
+		cout << "Nhap vao luong cua nhan vien: ";
+		cin >> nv.luong;
+		cout << "\nNhap he so luong cua nhan vien: ";
+		cin >> nv.heSoLuong;
+		cout << "\nNhap vao tham nien cua nhan vien: ";
+		cin >> nv.thamnien;
+		cin.ignore();
+		themCuoi(list, nv);
+	} while (1);
+}

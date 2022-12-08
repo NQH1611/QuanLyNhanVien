@@ -25,3 +25,4 @@ void giaiPhong(Nodeptr& list);
 Nodeptr taoNode(NhanVien nv);
 Nodeptr themDau(Nodeptr& list, NhanVien nv);
 Nodeptr themCuoi(Nodeptr& list, NhanVien nv);
+void nhapDSNV(Nodeptr& list);
