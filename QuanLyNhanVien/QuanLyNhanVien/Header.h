@@ -36,3 +36,5 @@ void xuatNV(Nodeptr list);
 void timHoNV(Nodeptr list, char* ho);
 void timTenNV(Nodeptr list, char* ten);
 void sapXepNV(Nodeptr& list, NhanVien& nv);
+void Ghi_Thong_Tin_1_NhanVien(ostream& fileout, NhanVien nv);
+void GHIFILE(Nodeptr list);
