@@ -67,6 +67,11 @@ void suaNV(Nodeptr& list)
 	cout << "\nBan muon sua nhan vien tai vi tri nao?";
 	cout << "\nNhap vi tri muon sua: ";
 	cin >> pos;
+	while (pos<0 || pos>tongNV)
+	{
+		cout << "\nVi tri ban chon khong hop le, moi ban chon lai :";
+		cin >> pos;
+	}
 	while (p != NULL)
 	{
 		timvt++;
