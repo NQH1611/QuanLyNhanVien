@@ -58,6 +58,8 @@ void nhapDSNV(Nodeptr& list)
 	{
 		cout << "\nNhap ma so nhan vien (NHAP 0 DE THOAT): ";
 		cin.getline(nv.msnv, 10);
+		if (strcmp(nv.msnv, "0") == 0)
+			break;
 		cout << "\nMoi ban nhap lai ma so nhan vien: ";
 		cin.getline(nv.msnv, 10);
 		cout << "\nNhap ho cua nhan vien: ";
