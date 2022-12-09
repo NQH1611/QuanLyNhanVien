@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include<iostream>
 #include<iomanip>
 #include"string.h"
@@ -34,7 +35,7 @@ void xoa_NVVT(Nodeptr& list, int vt);
 void timMSNV(Nodeptr list, char* ma);
 void xuatNV(Nodeptr list);
 void timHoNV(Nodeptr list, char* ho);
-//void suaNV(Nodeptr& list);
+void suaNV(Nodeptr& list);
 void timTenNV(Nodeptr list, char* ten);
 void sapXepNV(Nodeptr& list, NhanVien& nv);
 void Ghi_Thong_Tin_1_NhanVien(ostream& fileout, NhanVien nv);

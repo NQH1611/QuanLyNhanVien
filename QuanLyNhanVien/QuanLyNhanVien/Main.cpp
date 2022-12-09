@@ -89,9 +89,9 @@ int main() {
 		}
 		case 4:
 		{
-			//suaNV(dsnv);
-			/*xuatDSNV(dsnv);
-			break;*/
+			suaNV(dsnv);
+			xuatDSNV(dsnv);
+			break;
 		}
 		case 5:
 		{
