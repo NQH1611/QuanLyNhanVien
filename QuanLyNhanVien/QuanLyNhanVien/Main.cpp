@@ -1,6 +1,6 @@
 #include"Header.h"
 
-void main() {
+int main() {
 	Nodeptr dsnv;
 	//NhanVien nv;
 	//int n;
@@ -16,7 +16,7 @@ void main() {
 		cout << "\n\t3.Xoa 1 nhan vien.";
 		cout << "\n\t4.Sua thong tin nhan vien theo tieu chi.";
 		cout << "\n\t5.Luu file.";
-		cout << "\n\t6.tong luong";
+
 		cout << "\n\t0.Thoat.";
 		cout << "\n\t *************************************************";
 		cout << "\n\tChon 1 trong chuc nang tren: ";
@@ -89,9 +89,9 @@ void main() {
 		}
 		case 4:
 		{
-			suaNV(dsnv);
-			xuatDSNV(dsnv);
-			break;
+			//suaNV(dsnv);
+			/*xuatDSNV(dsnv);
+			break;*/
 		}
 		case 5:
 		{
@@ -110,4 +110,5 @@ void main() {
 	} while (chon != 0);
 	giaiPhong(dsnv);
 	system("pause");
+	return 0;
 }

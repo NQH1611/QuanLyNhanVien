@@ -50,6 +50,18 @@ Nodeptr themCuoi(Nodeptr& list, NhanVien nv)
 	}
 	return p;
 }
+bool kiemTra_TrungMa(Nodeptr& list, char* ma)
+{
+	Nodeptr p = list;
+	while (p != NULL)
+	{
+		if (strcmp(p->data.msnv, ma) == 0)
+			return true;
+		p = p->link;
+	}
+
+	return false;
+}
 void nhapDSNV(Nodeptr& list)
 {
 	NhanVien nv;
@@ -58,14 +70,25 @@ void nhapDSNV(Nodeptr& list)
 	{
 		cout << "\nNhap ma so nhan vien (NHAP 0 DE THOAT): ";
 		cin.getline(nv.msnv, 10);
-		cout << "\nMoi ban nhap lai ma so nhan vien: ";
-		cin.getline(nv.msnv, 10);
+		while (kiemTra_TrungMa(list, nv.msnv))
+		{
+			cout << "\nMa so nhan vien da co!" << endl;
+			cout << "\nMoi ban nhap lai ma so nhan vien: ";
+			cin.getline(nv.msnv, 10);
+		}
+		if (strcmp(nv.msnv, "0") == 0)
+			break;
 		cout << "\nNhap ho cua nhan vien: ";
 		cin.getline(nv.honv, 30);
 		cout << "\nNhap ten cau nhan vien: ";
 		cin.getline(nv.tennv, 30);
 		cout << "Nhap vao luong cua nhan vien: ";
 		cin >> nv.luong;
+		while (nv.luong <= 0)
+		{
+			cout << "\nLuong cua nhan vien khong the nhon hon hoac bang 0, moi nhap lai: ";
+			cin >> nv.luong;
+		}
 		cout << "\nNhap he so luong cua nhan vien: ";
 		cin >> nv.heSoLuong;
 		cout << "\nNhap vao tham nien cua nhan vien: ";
